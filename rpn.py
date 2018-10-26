@@ -19,7 +19,7 @@ def calculate(arg):
 
             stack.append(result)
     if len(stack) > 1:
-        raise ValueError
+        raise ValueError("Too many arguments on the stack")
     return(stack[0])
 
 

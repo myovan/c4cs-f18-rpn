@@ -18,6 +18,8 @@ def calculate(arg):
 
 
             stack.append(result)
+    if len(stack) > 1:
+        raise ValueError
     return(stack[0])
 
 

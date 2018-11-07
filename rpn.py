@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import colored
+from colored import stylize
 def calculate(arg):
     stack = []
 
@@ -27,7 +29,11 @@ def calculate(arg):
 def main():
     while True:
         result = calculate(input('rpn calc> '))
-        print(result)
+        if result < 0:
+            print(stylize(result, colored.fg("green")))
+        else:
+            angry = colored.fg("red") + colored.attr("bold")
+            print(stylize(result, angry, colored.attr("underlined")))
 
 if __name__ == '__main__':
     main()
